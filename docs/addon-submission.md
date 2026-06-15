@@ -5,10 +5,33 @@ Addon submissions are reviewed through pull requests.
 ## Requirements
 
 - Publish your addon from its own public repository.
-- Attach a release archive containing `addon.json` and addon files.
+- Build an addon install archive containing `addon.json` and the addon files needed at runtime.
+- Upload that archive as a GitHub Release asset.
 - Add a manifest file under `addons/`.
 - Add the manifest to `index.json`.
 - Include a SHA-256 checksum for the release archive. Addons without a valid checksum are not considered installable.
+
+## Manual Release Package Flow
+
+GitHub's automatic `Source code (zip)` and `Source code (tar.gz)` downloads are not addon install packages.
+
+Before submitting or updating an addon:
+
+1. Build the addon package from the addon repository.
+2. Upload the generated `.zip` file as a GitHub Release asset.
+3. Generate the SHA-256 checksum from that exact `.zip` file.
+4. Set `downloadUrl` to the uploaded release asset URL.
+5. Set `sha256` to the checksum for that uploaded release asset.
+
+The release asset should contain the addon runtime files, such as:
+
+```text
+addon.json
+web/
+README.md
+```
+
+Do not use GitHub's automatic source archive as `downloadUrl`.
 
 ## Updating an Existing Addon
 
