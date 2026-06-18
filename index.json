@@ -13,5 +13,16 @@
       "lifecycleUrl": "",
       "manifestUrl": "https://raw.githubusercontent.com/Red-Blink/dune-docker-addons/main/addons/leadership-board-demo.json"
     }
+  {
+      "id": "eda-exchange-bot",
+      "name": "EDA Exchange Bot",
+      "description": "Easy Dune Admin exchange seeder controls for RedBlink Dune Docker Console.",
+      "author": "n00bGames",
+      "version": "0.8.7-beta",
+      "lifecycle": "active",
+      "lifecycleMessage": "",
+      "lifecycleUrl": "",
+      "manifestUrl": "https://raw.githubusercontent.com/Red-Blink/dune-docker-addons/main/addons/eda-exchange-bot.json"
+  }
   ]
 }
