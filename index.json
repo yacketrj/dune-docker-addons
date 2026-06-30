@@ -16,7 +16,7 @@
     {
       "id": "eda-exchange-bot",
       "name": "EDA Exchange Bot",
-      "description": "Easy Dune Admin exchange seeder controls for RedBlink Dune Docker Console.",
+      "description": "Easy Dune \u0041dmin exchange seeder controls for RedBlink Dune Docker Console.",
       "author": "n00bGames",
       "version": "0.8.7-beta",
       "lifecycle": "active",
@@ -29,7 +29,7 @@
       "name": "Dune Ops Observability",
       "description": "Read-only operations and analytics addon for Dune Docker Console.",
       "author": "DarkDante",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "lifecycle": "active",
       "lifecycleMessage": "",
       "lifecycleUrl": "",
