@@ -1,0 +1,16 @@
+{
+  "id": "dune-ops-observability",
+  "name": "Dune Ops Observability",
+  "description": "Read-only operations and analytics addon for Dune Docker Console.",
+  "author": "DarkDante",
+  "version": "1.0.0",
+  "type": "ui",
+  "sourceUrl": "https://github.com/yacketrj/dune-ops-observability-addon",
+  "downloadUrl": "https://github.com/yacketrj/dune-ops-observability-addon/releases/download/v1.0.0/dune-ops-observability-1.0.0.zip",
+  "sha256": "PLACEHOLDER-REPLACE-AFTER-RELEASE",
+  "permissions": {
+    "ops": [
+      "read"
+    ]
+  }
+}
