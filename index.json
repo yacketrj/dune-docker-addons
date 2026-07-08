@@ -29,7 +29,7 @@
       "name": "Dune Ops Observability",
       "description": "Read-only operations addon for Dune Docker Console. Provides OPS health summary, player aggregate, and farm aggregate views through the Console bridge.",
       "author": "DarkDante",
-      "version": "0.3.1",
+      "version": "0.4.1",
       "lifecycle": "active",
       "lifecycleMessage": "",
       "lifecycleUrl": "",
