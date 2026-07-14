@@ -34,6 +34,17 @@
       "lifecycleMessage": "",
       "lifecycleUrl": "",
       "manifestUrl": "https://raw.githubusercontent.com/Red-Blink/dune-docker-addons/main/addons/dune-ops-observability.json"
+    },
+    {
+      "id": "dune-airdrop-addon",
+      "name": "Airdrop Manager",
+      "description": "Standalone manager for playtime, daily streak, and weekly attendance-based G0 instant airdrops.",
+      "author": "atobo",
+      "version": "1.2.3",
+      "lifecycle": "active",
+      "lifecycleMessage": "",
+      "lifecycleUrl": "",
+      "manifestUrl": "https://raw.githubusercontent.com/Red-Blink/dune-docker-addons/main/addons/dune-airdrop-addon.json"
     }
   ]
 }
