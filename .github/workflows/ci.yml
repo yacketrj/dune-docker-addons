@@ -20,15 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate index.json
+      - name: Validate JSON files
         run: |
-          python3 -c "import json; json.load(open('index.json'))" || { echo "Invalid JSON"; exit 1; }
-      - name: Validate addon JSON files
-        run: |
-          find addons -name "*.json" -exec python3 -c "import json,sys; json.load(open(sys.argv[1]))" {} \; || { echo "Invalid JSON found"; exit 1; }
+          find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" -exec python3 -c "import json,sys; json.load(open(sys.argv[1]))" {} \; || { echo "Invalid JSON found"; exit 1; }
+          echo "All JSON files valid"
 
   security:
-    name: Security
+    name: Security Scanning
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +41,14 @@ jobs:
         with:
           config: >-
             p/security-audit
+            p/secrets
+      - name: Run trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '1'
 
   ci-gate:
     name: CI Gate
